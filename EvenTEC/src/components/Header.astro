@@ -3,7 +3,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
 ---
 
 <header
-  class="w-full flex bg-slate-900 inset-x-0 justify-between content-center align-middle h-16 shadow-md"
+  class="w-full flex bg-zinc-900 inset-x-0 justify-between content-center align-middle h-16 shadow-lg top-0 z-50"
 >
   <Astronav>
     <div class="flex items-center px-5">
@@ -31,19 +31,19 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
       </svg>
 
       <button
-        class="w-28 text-lg hover:bg-slate-950 h-full px-3"
+        class="w-28 text-lg hover:underline tr h-full px-3"
         onclick="location.href = 'eventPage.html';"
       >
         Inicio
       </button>
       <button
-        class="w-28 text-lg hover:bg-slate-950 h-full px-3"
+        class="w-28 text-lg hover:underline h-full px-3"
         onclick="location.href = 'calendarPage.html';"
       >
         Calendario
       </button>
       <button
-        class="w-28 text-lg hover:bg-slate-950 h-full px-3"
+        class="w-28 text-lg hover:underline h-full px-3"
         onclick="location.href = 'crearEvento.html';"
       >
         Crear
@@ -51,7 +51,9 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
     </div>
 
     <div class="middle-section flex items-center w-full px-8">
-      <button class="search-button z-10">
+      <button
+        class="search-button z-10 motion-safe:transition hover:opacity-60"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-search -mr-8"
@@ -70,7 +72,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
         </svg>
       </button>
       <input
-        class="searchBar w-full h-10 bg-slate-950 rounded-full pl-12 pr-3 -ml-2 min-w-7"
+        class="searchBar w-full h-10 bg-zinc-800/30 rounded-full pl-12 pr-3 -ml-2 min-w-7"
         type="search"
         placeholder="Busqueda"
       />
@@ -100,8 +102,8 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
             <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
           </svg>
         </button>
-        <DropdownItems class="obsolute bg-slate-800">
-          <div class="absolute top-16 right-0 bg-slate-950 w-96 h-96"></div>
+        <DropdownItems class="obsolute bg-zinc-800">
+          <div class="absolute top-16 right-0 bg-zinc-800/30 w-96 h-96"></div>
         </DropdownItems>
       </Dropdown>
 
@@ -151,12 +153,10 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
             <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
           </svg>
         </button>
-        <DropdownItems class="obsolute bg-slate-800">
-          <div class="absolute top-16 right-0 bg-slate-950 w-fit">
+        <DropdownItems class="obsolute bg-zinc-800">
+          <div class="absolute top-16 right-0 bg-zinc-800/30 w-fit">
             <ul class="text-lg flex flex-col">
-              <li
-                class="py-3 px-7 flex gap-1 content-center hover:bg-slate-800"
-              >
+              <li class="py-3 px-7 flex gap-1 content-center hover:bg-zinc-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-messages"
@@ -178,9 +178,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
                 </svg>
                 <button>Foro</button>
               </li>
-              <li
-                class="py-3 px-7 flex gap-1 content-center hover:bg-slate-800"
-              >
+              <li class="py-3 px-7 flex gap-1 content-center hover:bg-zinc-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-calendar-clock"
@@ -205,9 +203,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
                 </svg>
                 <button>Propuestas</button>
               </li>
-              <li
-                class="py-3 px-7 flex gap-1 content-center hover:bg-slate-800"
-              >
+              <li class="py-3 px-7 flex gap-1 content-center hover:bg-zinc-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-qrcode"
@@ -242,9 +238,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
                 </svg>
                 <button>QR</button>
               </li>
-              <li
-                class="py-3 px-7 flex gap-1 content-center hover:bg-slate-800"
-              >
+              <li class="py-3 px-7 flex gap-1 content-center hover:bg-zinc-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-logout"
