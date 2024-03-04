@@ -1,15 +1,17 @@
 ---
+import type { Event } from "@/lib/data";
+
 interface Props {
-  image: string;
-  title: string;
-  time: string;
-  id: string;
+  event: Event;
 }
 
-const { id, title, time, image } = Astro.props;
+const { event } = Astro.props;
+
+const { id, title, date, image } = event;
 ---
 
-<article
+<a
+  href={`/event/${id}`}
   class="relative aspect-video backdrop-blur-md shadow-inner border border-black/10 shadow-white/10 rounded-xl overflow-hidden group"
 >
   <img
@@ -21,10 +23,10 @@ const { id, title, time, image } = Astro.props;
   />
   <div class="select-none flex flex-col px-3 py-1 justify-end h-full">
     <h2 class="text-lg text-white/90 font-bold z-20">{title}</h2>
-    <h3 class="text-white/70 font-medium z-20">{time}</h3>
+    <h3 class="text-white/70 font-medium z-20">{date}</h3>
   </div>
   <div
     class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent -z-10"
   >
   </div>
-</article>
+</a>

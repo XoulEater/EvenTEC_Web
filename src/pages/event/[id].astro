@@ -1,11 +1,16 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { events } from "@/lib/data";
+
+const { id } = Astro.params;
+
+const event = events.find((event) => event.id === id);
 ---
 
 <Layout title="Welcome to Astro.">
     <div class="mt-20 flex items-center flex-col gap-3">
         <h1 class="text-4xl font-bold text-center">
-            Welcome to Even<span class="text-sky-500">TEC</span>
+            {event?.title}
         </h1>
     </div>
 </Layout>

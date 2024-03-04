@@ -1,30 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import EventCard from "@/components/EventCard.astro";
-
-const data = [
-  {
-    title: "Concert",
-    time: "18/10/2021",
-    image:
-      "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maur%C3%ADcio-mascaro-801863.jpg&fm=jpg",
-    id: "1",
-  },
-  {
-    title: "Conference",
-    time: "20/10/2021",
-    image:
-      "https://images.inc.com/uploaded_files/image/1920x1080/getty_499517325_111832.jpg",
-    id: "2",
-  },
-  {
-    title: "Workshop",
-    time: "22/10/2021",
-    image:
-      "https://images.pexels.com/photos/1181357/pexels-photo-1181357.jpeg?cs=srgb&dl=pexels-ron-lach-1181357.jpg&fm=jpg",
-    id: "3",
-  },
-];
+import { events } from "@/lib/data";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -35,16 +12,7 @@ const data = [
     <div
       class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-5/6 z-10"
     >
-      {
-        data.map((event) => (
-          <EventCard
-            title={event.title ?? ""}
-            time={event.time ?? ""}
-            image={event.image ?? ""}
-            id={event.id ?? ""}
-          />
-        ))
-      }
+      {events.map((event) => <EventCard event={event} />)}
     </div>
   </div>
 </Layout>
