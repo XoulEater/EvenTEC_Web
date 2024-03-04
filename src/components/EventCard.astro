@@ -2,11 +2,11 @@
 interface Props {
   image: string;
   title: string;
-  body: string;
+  time: string;
   id: string;
 }
 
-const { id, title, body, image } = Astro.props;
+const { id, title, time, image } = Astro.props;
 ---
 
 <article
@@ -17,13 +17,12 @@ const { id, title, body, image } = Astro.props;
       ? "https://dicesabajio.com.mx/wp-content/uploads/2021/06/no-image.jpeg"
       : image}
     alt={title}
-    class="background transition-scale absolute inset-0 w-full h-full object-cover object-center -z-10 opacity-90 group-hover:scale-[1.05] group-hover:saturate-100 saturate-50 transition-all duration-300 ease-in-out"
+    class="background transition-transform absolute inset-0 w-full h-full object-cover object-center -z-10 opacity-90 group-hover:scale-105 group-hover:saturate-100 saturate-50 duration-300 ease-in-out"
   />
   <div class="select-none flex flex-col px-3 py-1 justify-end h-full">
     <h2 class="text-lg text-white/90 font-bold z-20">{title}</h2>
-    <h3 class="text-white/70 font-medium z-20">{body}</h3>
+    <h3 class="text-white/70 font-medium z-20">{time}</h3>
   </div>
-
   <div
     class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent -z-10"
   >

@@ -1,25 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import EventCard from "../components/EventCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import EventCard from "@/components/EventCard.astro";
 
 const data = [
   {
     title: "Concert",
-    body: "18/10/2021",
+    time: "18/10/2021",
     image:
       "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maur%C3%ADcio-mascaro-801863.jpg&fm=jpg",
     id: "1",
   },
   {
     title: "Conference",
-    body: "20/10/2021",
+    time: "20/10/2021",
     image:
       "https://images.inc.com/uploaded_files/image/1920x1080/getty_499517325_111832.jpg",
     id: "2",
   },
   {
     title: "Workshop",
-    body: "22/10/2021",
+    time: "22/10/2021",
     image:
       "https://images.pexels.com/photos/1181357/pexels-photo-1181357.jpeg?cs=srgb&dl=pexels-ron-lach-1181357.jpg&fm=jpg",
     id: "3",
@@ -28,7 +28,7 @@ const data = [
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="mt-4 flex items-center flex-col gap-3">
+  <div class="mt-20 flex items-center flex-col gap-3">
     <h1 class="text-4xl font-bold text-center">
       Welcome to Even<span class="text-sky-500">TEC</span>
     </h1>
@@ -39,7 +39,7 @@ const data = [
         data.map((event) => (
           <EventCard
             title={event.title ?? ""}
-            body={event.body ?? ""}
+            time={event.time ?? ""}
             image={event.image ?? ""}
             id={event.id ?? ""}
           />

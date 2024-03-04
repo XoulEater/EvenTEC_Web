@@ -3,7 +3,7 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
 ---
 
 <header
-  class="w-full flex bg-zinc-900 inset-x-0 justify-between content-center align-middle h-16 shadow-lg top-0 z-50"
+  class="fixed w-full flex bg-zinc-900 inset-x-0 justify-between content-center align-middle h-16 shadow-lg top-0 z-50"
 >
   <Astronav>
     <div class="flex items-center px-5">
@@ -32,13 +32,13 @@ import { Astronav, MenuItems, Dropdown, DropdownItems } from "astro-navbar";
 
       <button
         class="w-28 text-lg hover:underline tr h-full px-3"
-        onclick="location.href = 'eventPage.html';"
+        onclick="location.href = '/';"
       >
         Inicio
       </button>
       <button
         class="w-28 text-lg hover:underline h-full px-3"
-        onclick="location.href = 'calendarPage.html';"
+        onclick="location.href = 'calendar';"
       >
         Calendario
       </button>
