@@ -5,7 +5,10 @@ dist/
 .astro/
 
 # dependencies
-node_modules/
+node_modules
+dist
+dist-ssr
+*.local
 
 # logs
 npm-debug.log*
@@ -19,3 +22,12 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
