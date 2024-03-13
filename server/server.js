@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Event = require('./models/eventSchema');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 
 
-mongoose.connect()
+mongoose.connect(process.env.MONGO)
     .then(() => { console.log('Connection Succeed :)') })
     .catch((err) => { console.log(err) });
 
