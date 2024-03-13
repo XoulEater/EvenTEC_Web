@@ -1,7 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import EventCard from "@/components/EventCard.astro";
-import { events } from "@/lib/data";
+import { type Event } from "@/lib/data";
+
+let response = await fetch("http://localhost:3000/api/events");
+
+let events: Event[] = [];
+
+if (response.ok) {
+  events = await response.json();
+} else {
+  console.error("Failed to fetch events");
+}
 ---
 
 <Layout title="Welcome to Astro.">

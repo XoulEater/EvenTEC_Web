@@ -17,8 +17,7 @@ export const events: Event[] = [
         title: "Concert",
         date: "18/10/2021",
         description: "This is event 1",
-        image:
-            "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maur%C3%ADcio-mascaro-801863.jpg&fm=jpg",
+        image: "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maur%C3%ADcio-mascaro-801863.jpg&fm=jpg",
         organizer: "Organizer 1",
         capacity: 100,
         schedule: "10:00 AM - 12:00 PM",
